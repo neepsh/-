@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/icom.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>登录</title>
+</head>
+<body>
+
+<div id="login">
+    <div class="logo">
+        <div><img src="../img/logo.jpg" alt="logo"/></div>
+        <div><p> 登录 ·阿橙果啦·配送平台</p></div>
+    </div>
+    <div class="content">
+        <div class="phone">
+            <input type="tel"   placeholder="请输入手机号">
+        </div>
+        <div  class="password">
+            <input type="number" placeholder="请输入验证码">
+            <button  >发送验证码</button>
+        </div>
+        <div   class="password password_hide">
+            <input type="number" placeholder="请输入密码">
+        </div>
+        <div class="loginForget">
+            <div>
+                <span class="check_type">换个方式登录</span>
+                <span ><a href="regist.html">忘记密码？</a></span>
+            </div>
+        </div>
+        <div class="land">
+            <button >登录</button>
+        </div>
+        <div class="loginForget">
+            <div>
+                <span >暂无账号？去注册</span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>客服热线：400-8288251</p>
+    <p>服务时间：每日9:00-21:00</p>
+    <p>版权所有：南京鑫倍泽物联科技@·维空间</p>
+</footer>
+</body>
+<script src="../js/src/jquery.min.js"></script>
+<script>
+    let oWidth=$(window).width()/7.5;
+
+    $(document.documentElement).css("fontSize",oWidth);
+
+    $(function () {
+
+        var username,password;
+
+        var regMoblie = /^1[345678]\d{9}$/;
+
+        $('.check_type').click(function () {
+            $('.password').toggleClass('password_hide')
+        });
+
+        $('input').blur(function () {
+
+           if($(this).val()==""){
+
+               if($(this)[0].type=="tel"){
+
+                   $(this)[0].placeholder="请输入手机号";
+
+               }else {
+
+                   $(this)[0].placeholder = '请输入密码';
+               }
+
+               $(this).css("borderColor","red");
+           }else {
+
+
+
+               if ($(this)[0].type=="tel"){
+
+                    if(!regMoblie.test($(this).val())){
+                        //$(this).val("请输入正确的手机号")
+
+                        alert("请输入正确的手机号")
+                        return;
+                    }
+
+                   username=$(this).val();
+               }else {
+                   password=$(this).val();
+               }
+
+           }
+        });
+
+        $('input').focus(function () {
+            $(this).css("borderColor","#d6e0e2")
+        });
+
+        $('.land').click(function () {
+
+            if (! username || !password){
+                return
+            }
+            console.log(username)
+            console.log(password)
+
+        })
+    })
+
+</script>
+
+</html>

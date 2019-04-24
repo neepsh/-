@@ -1,0 +1,49 @@
+.person_logo{
+    height: 1.8rem;
+    line-height: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.32rem;
+    background: #fff;
+    margin-top: 0.14rem;
+
+}
+.person_logo span{
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+.person_logo img{
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    margin-top: 0.3rem;
+}
+
+.content{
+    margin-top: 0.1rem;
+    background: #fff;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.07rem;
+    border-bottom: 1px solid #e8e6e6;
+}
+.person_text{
+    flex-grow: 3;
+    text-align: left;
+    margin-left:0.3rem ;
+}
+.person_text input{
+    height: 98%;
+    width: 100%;
+    border: none;
+}
+.person_name{
+    width:1.5rem ;
+    text-align: right;
+}
+.el-select{
+    height: 100%;
+    width: 100%;
+}

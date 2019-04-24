@@ -1,0 +1,27 @@
+.news_list{
+    margin: 0 0.14rem;
+    padding: 0.3rem;
+    background: #fff;
+    margin-top: 0.23rem;
+    border-radius: 0.06rem;
+    color: #7a7a7a;
+}
+.list_name{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.27rem;
+    text-align: left;
+    font-size: 0.25rem;
+
+}
+.list_name p{
+    flex-grow: 10;
+    text-align: left;
+    font-size: 0.3rem;
+
+}
+.list_content{
+    padding-top:0.3rem;
+    text-align: left;
+}

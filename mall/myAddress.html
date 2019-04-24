@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/icom.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/myAddress.css">
+    <title>我的地址</title>
+</head>
+<body>
+<header id="header"></header>
+
+<div id="content">
+    <div class="address_list show_address">
+        <div class="address manage">
+            <div class="address_icon"><i class="icon-0517"></i></div>
+            <div class="address_content"><p>
+                收货人：
+                <span>王集镇</span> <b>45646546546</b></p>
+                <p>南京市江宁区启迪华清园九栋1楼n305</p></div>
+            <div class="address_arrow"></div>
+        </div>
+    </div>
+    <div class="address_manage show_manage">
+        <ul class="contents">
+            <li>
+                <div class="list_name">收货地址：</div>
+                <div class="list_input show_map">
+                    <i class="icon-0517"></i>
+                    <input type="text" placeholder="点击选择" readonly="readonly">
+                    <p></p>
+                </div>
+            </li>
+            <li>
+                <div class="list_name">详细地址：</div>
+                <div class="list_input">
+                    <input type="text" placeholder="门牌号 例：中山东路47号5栋666室">
+                </div>
+            </li>
+            <li>
+                <div class="list_name">收货人：</div>
+                <div class="list_input">
+                    <input type="text" placeholder="填写您的姓名">
+                </div>
+            </li>
+            <li >
+                <div class="list_name">联系电话：</div>
+                <div class="list_input"><input type="text" placeholder="您的手机号">
+                </div>
+            </li>
+            <li>
+                <div  class="list_name">性别：</div>
+                <div  class="list_radio">
+                    <input  type="radio" placeholder="点击选择" value="sex"> <span >先生</span>
+                    <input type="radio" placeholder="点击选择" value="sex"> <span>女士</span></div>
+            </li>
+            <li  class="label">
+                <div  class="list_name">标签：</div>
+                <div  class="list_btn">
+                    <button >公司</button>
+                    <button >家</button>
+                    <button >其他</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer id="add_btn" class="show_address"><i class="icon-0294"></i>新增地址</footer>
+<footer class="show_manage manage_btn">
+    <button >删除</button> <button >保存地址</button>
+</footer>
+
+</body>
+<script type="text/javascript" src="../js/src/jquery.js"></script>
+<script type="text/javascript" src="../js/myAddress.js"></script>
+</html>

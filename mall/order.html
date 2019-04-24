@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+
+    <link rel="stylesheet" href="../css/icom.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/order.css">
+    <title>我的订单</title>
+</head>
+<body>
+<header id="header"></header>
+<div id="content">
+    <div id="nav">
+        <div class="nav nav_active">
+            <span>全部</span>
+        </div>
+        <div class="nav">
+            <span>未接单</span>
+        </div>
+        <div class="nav">
+            <span>已接单</span>
+        </div>
+    </div>
+    <div id="list">
+        <div class="list">
+            <ul>
+                <li class="order">
+                    <div class="order_header">
+                        <div>
+                            <b>订单编号：</b>
+                            <span>1515415154</span>
+                        </div>
+                        <div>未接单</div>
+                    </div>
+                    <div class="order_content">
+                        <div class="order_left">
+                            <div class="order_img">
+                                <img src="../img/procuct_img.jpg" alt="product">
+                            </div>
+                            <div class="order_info">
+                                <span>鲜榨橙汁</span>
+                                <p>鲜榨橙汁纸杯装</p>
+                            </div>
+                        </div>
+                        <div class="order_right">
+                            <div>￥15</div>
+                            <div>x3</div>
+                            <div>
+                                共计：<span>￥45.00</span>元
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_footer">
+                        <div class="order_code">
+                            取货码：
+                            <span>1512121</span>
+                        </div>
+                        <div class="order_btn">
+                            <button class="order_assess"><a href="assess.html">评价</a></button>
+                            <button class="order_delete">退货</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="list"></div>
+        <div class="list"></div>
+    </div>
+
+<!--  退款售后-->
+
+    <div id="support" style="display: none">
+        <div class="support_bg"></div>
+        <div class="support">
+            <div class="del_support">
+                <div class="support_header">退货信息</div>
+                <div class="support_content">
+                    <div>请选择取消订单的原因</div>
+                    <ul class="support_list">
+                        <li><span>我不想买了</span></li>
+                        <li><span>信息填写错误，重新拍</span></li>
+                        <li><span>卖家缺货</span></li>
+                        <li><span>选择自提</span></li>
+                        <li><span>其他原因</span></li>
+                    </ul>
+                </div>
+                <div class="support_info">
+                    <div>温馨提示</div>
+                    <p>1、订单一旦取消，显示特价、购买资格等购买优惠可能一并取消，不可恢复</p>
+                    <p>2、订单所使用红包，优惠券支持退回，为避免过期请尽快使用</p>
+                    <p>3、若您支付未成功银行卡已扣款，钱款将于四个工作日内退回银行卡</p>
+                </div>
+                <div class="support_btn">
+                    <button>暂不取消</button>
+                    <button>确定取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<div id="footer"></div>
+</body>
+<script type="text/javascript" src="../js/src/jquery.js"></script>
+<script type="text/javascript" src="../js/src/dialog.js"></script>
+<script type="text/javascript" src="../js/order.js"></script>
+</html>

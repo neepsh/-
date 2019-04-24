@@ -1,0 +1,46 @@
+.coupon_ul{
+    margin-top: 0.44rem;
+}
+.coupon_list{
+    margin: 0 0.32rem;
+    background: #fff;
+    height: 1.95rem;
+    display: flex;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.list_left{
+    color: #fff;
+    flex-grow: 3;
+    font-size: 0.25rem;
+    background: linear-gradient(to bottom right, #FD335B , #FE6B21);
+}
+.list_right{
+    width: 2.5rem;
+    text-align: center;
+    line-height: 1.95rem;
+    font-size: 0.3rem;
+}
+.list_type{
+    display: flex;
+    justify-content: space-around
+}
+
+.list_type b{
+    font-size: 0.81rem;
+}
+.list_name{
+    font-size: 0.4rem;
+    font-weight: blod;
+    padding-top: 0.3rem;
+}
+.list_info{
+    padding-top: 0.42rem;
+    font-size: 0.25rem;
+}
+.list_num{
+    padding-top: 0.3rem;
+}

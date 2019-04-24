@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 基本的按钮下拉菜单</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: red;
+            /*position: relative;*/
+            /*left: 50%;*/
+            /*transform: translateX(100%);*/
+            /*margin-left: 100px;*/
+        }
+        #box{
+            width: 600px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle"
+            data-toggle="dropdown">
+        默认 <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a href="#">功能</a></li>
+        <li><a href="#">另一个功能</a></li>
+        <li><a href="#">其他</a></li>
+        <li class="divider"></li>
+        <li><a href="#">分离的链接</a></li>
+    </ul>
+</div>
+<div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">原始
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a href="#">功能</a></li>
+        <li><a href="#">另一个功能</a></li>
+        <li><a href="#">其他</a></li>
+        <li class="divider"></li>
+        <li><a href="#">分离的链接</a></li>
+    </ul>
+</div>
+
+
+<div id="box">
+    <div class="box"></div>
+</div>
+
+</body>
+<script>
+   /* $.ajax({
+        type:"post",
+        url:"https://www.easy-mock.com/mock/592501a391470c0ac1fab128/table/list",//这个是后台给的地址，请求这个地址会返回给你数据,(这里就像一个电话号码)
+        data:{//这里就像电话打通了你说的话
+            // "page":1
+        },
+        dataType:"json",
+        success:function (data) {//这里就是电话打通了，对方回给你的消息
+
+            //下面就是我们根据后台发给你的消息，我们要去做的事情
+           // console.log(response);
+          //  $('.dropdown-menu').empty();//这个是先把原来的ul清空，不清空的话会原来也显示出来
+
+            for(var i=0;i<data.list.length;i++){
+                console.log(data.list[i].name);
+                $('.dropdown-menu').append(`
+                    <li><a href="#">${data.list[i].name}</a></li>
+                `)
+            }
+
+        },
+        error:function (err) {
+            console.log(err)
+        }
+    })*/
+
+    fetch('https://www.easy-mock.com/mock/592501a391470c0ac1fab128/table/list',{
+        method:'post'
+    })
+        .then(res=>{
+            var data=res.json();
+            console.log(data)
+
+        }).then(err=>{
+            console.log(err)
+    })
+
+    function fn(aa) {
+        alert(aa);//aa是不是就是4545645这个
+    }
+
+   // fn(454655465)
+</script>
+</html>

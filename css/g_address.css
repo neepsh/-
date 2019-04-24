@@ -1,0 +1,111 @@
+.title{
+    text-align: left;
+    font-size: 0.35rem;
+    padding: 0.36rem 0;
+}
+.contents{
+    padding: 0 0.25rem;
+}
+.list_icon{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 0.43rem;
+}
+.list_icon span{
+    font-size: 0.25rem;
+    color: #FC9316;
+    height: 0.4rem;
+    width: 1.15rem;
+    border-radius: 0.2rem;
+    background: #fff;
+    text-align: center;
+    line-height: 0.4rem;
+}
+
+.list{
+    background: #FC9316;
+    color: #fff;
+    padding: 0.2rem;
+    text-align: left;
+    border-radius: 0.1rem;
+    font-size: 0.3rem;
+}
+.list_name{
+    padding-top: 0.24rem;
+}
+.address_add{
+    margin-top: 0.52rem;
+    height: 0.91rem;
+    line-height: 0.91rem;
+    text-align: center;
+    background: #fff;
+}
+.appling{
+    text-align: center;
+    position: fixed;
+    height: 100%;
+    width:100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    color: #5f5f5f;
+}
+.apply_icon{
+    color: #FC9316;
+    font-size: 1.58rem;
+}
+.apply_font{
+    font-size: 0.5rem;
+    color: #FC9316;
+}
+.appling p{
+    margin:0.3rem   1.7rem;
+
+}
+
+
+
+/*dfsd*/
+.apply_content{
+    margin-top: 0.21rem;
+    text-align: left;
+}
+.lists{
+    height: 1rem;
+    line-height: 1rem;
+    padding: 0 0.2rem;
+    background: #fff;
+    margin-bottom: 2px;
+    position: relative;
+}
+.lists:after{
+    display: block;
+    height: 0.2rem;
+    width: 0.2rem;
+    border-left: 0.03rem solid;
+    border-top: 0.03rem solid;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    content: '';
+    color: #a0a0a0;
+    right:0.5rem;
+    top: 0.4rem;
+    position: absolute;
+}
+.apply_check{
+    padding: 0.46rem 0.15rem;
+}
+.apply_check span{
+    color: #FC9316;
+}
+.add_btn{
+    height:1.02rem ;
+    line-height: 1.02rem;
+    font-size: 0.35rem;
+    color: #fff;
+    background: #FC9316;
+    text-align: center;
+}

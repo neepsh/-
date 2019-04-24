@@ -2,9 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/icom.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/assess.css">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<header id="header"></header>
+
+<div id="content">
+    <section>
+        <ul id="star">
+            <li class="star">
+                <div class="assess_title">差</div>
+                <div class="icon icon1"></div>
+                <div>
+                    <i class="icon-0350"></i>
+
+                </div>
+            </li>
+            <li class="star">
+                <div class="assess_title">一般</div>
+                <div class="icon icon2"></div>
+                <div>
+                    <i class="icon-0350"></i>
+                    <i class="icon-0350"></i>
+                </div>
+            </li>
+            <li class="star">
+                <div class="assess_title">还不错</div>
+                <div class="icon icon3"></div>
+                <div>
+                    <i class="icon-0350"></i>
+                    <i class="icon-0350"></i>
+                    <i class="icon-0350"></i>
+
+                </div>
+            </li>
+            <li class="star">
+                <div class="assess_title">很满意</div>
+                <div class="icon icon4"></div>
+                <div>
+                    <i class="icon-0350"></i>
+                    <i class="icon-0350"></i>
+                    <i class="icon-0350"></i>
+                    <i class="icon-0350"></i>
+                </div>
+            </li>
+            <li class="star">
+                <div class="assess_title">强烈推荐</div>
+                <div class="icon icon5"></div>
+                <div>
+                    <i class="icon-0350"></i>
+                    <i class="icon-0350"></i>
+                    <i class="icon-0350"></i>
+                    <i class="icon-0350"></i>
+                    <i class="icon-0350"></i>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <div id="assess">
+            <div>
+                <textarea name="" id="" placeholder="口味如何？服务还周到？（写够十五字，才算好同志）" ></textarea>
+            </div>
+            <div class="load_img">
+                <div class="img-box full">
+                    <section class=" img-section">
+                        <p class="up-p"><span class="up-span">最多可以上传5张图片，马上上传</span></p>
+                        <div class="z_photo upimg-div clear">
+                            <section class="z_file fl">
+                                <img src="../img/a11.png" class="add-img">
+                                <input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple="">
+                            </section>
+                        </div>
+                    </section>
+                </div>
+                <aside class="mask works-mask">
+                    <div class="mask-content">
+                        <p class="del-p ">您确定要删除作品图片吗？</p>
+                        <p class="check-p"><span class="del-com wsdel-ok">确定</span><span class="wsdel-no">取消</span></p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <div class="asess_btn">
+        <button>发布</button>
+    </div>
+</div>
+
 </body>
+<script type="text/javascript" src="../js/src/jquery.min.js"></script>
+<script type="text/javascript" src="../js/assess.js"></script>
 </html>

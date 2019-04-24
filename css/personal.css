@@ -1,0 +1,104 @@
+.user_personal img{
+    height: 1.02rem;
+    width: 1.02rem;
+    border-radius: 50%;
+}
+.personal_header{
+    padding: 0.26rem;
+    background: #FC9316;
+    color: #fff;
+}
+.user_personal{
+    display: flex;
+}
+.user_personal>div:nth-of-type(2){
+    flex-grow: 4;
+    text-align: left;
+    margin-left: 0.2rem;
+    font-size:0.35rem;
+}
+.bg_span{
+    font-size: 0.25rem;
+    background: rgba(0,0,0,0.2);
+    display: inline-block;
+    padding: 1px 3px;
+}
+.user_personal i{
+    font-size: 0.43rem;
+}
+.user_personal a{
+    color: #fff;
+}
+.personal_money{
+    margin-top: 0.4rem;
+    font-size: 0.57rem;
+    padding-bottom: 1rem;
+}
+
+/* nav */
+
+.personal_nav{
+    margin: 0 0.24rem;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    border-radius: 0.3rem;
+    top: -1rem;
+    padding: 0.47rem;
+}
+.personal_nav img{
+    height: 0.46rem;
+    width: 0.46rem;
+}
+.personal_nav a{
+    color: #7a7a7a;
+    display: inline-block;
+}
+.personal_nav div{
+    padding-top: 0.15rem;
+}
+
+/* nav end */
+
+/* list */
+.personal_list{
+    text-align: left;
+    line-height: 1.07rem;
+    margin-bottom: 2px;
+    background: #fff;
+    font-size: 0.3rem;
+    color: #7a7a7a;
+    padding-left:0.35rem;
+    position: relative;
+}
+.personal_list:after{
+    display: block;
+    position: absolute;
+    height: 0.2rem;
+    width: 0.2rem;
+    border-left: 0.02rem solid;
+    border-top: 0.02rem solid;
+    transform: rotate(135deg);
+    content: '';
+
+    right: 0.36rem;
+    top: 0.34rem;
+}
+.personal_ul{
+    position: relative;
+    top: -0.8rem;
+}
+.personal_list a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color :#7a7a7a;
+}
+.personal{
+    margin-bottom: -1rem;
+}
+#content{
+    font-size: 0.3rem;
+    text-align: center;
+}

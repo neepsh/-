@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/icom.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>注册</title>
+</head>
+<body>
+
+<div id="regist">
+    <div class="logo">
+        <div><img src="../img/logo.jpg" alt="logo"/></div>
+        <div><p> <span >注册 ·</span> 阿橙果啦·配送平台</p></div>
+    </div>
+    <div class="content">
+
+        <div class="phone">
+            <input type="tel" name="phone"  placeholder="请输入手机号">
+        </div>
+
+        <div class="password">
+            <input type="password" name="password1"  placeholder="请输入密码">
+        </div>
+        <div class="password">
+            <input type="password" name="password2"  placeholder="确认密码">
+        </div>
+        <div class="password">
+            <input type="number" name="code" placeholder="请输入验证码">
+            <button >发送验证码</button>
+        </div>
+        <div class="agreement">
+            <span>注册后即表示您已同意</span>
+            <a href="#" >《电子卡注册协议》</a>
+        </div>
+
+        <div class="land">
+            <button >注册</button>
+        </div>
+        <div class="loginForget">
+            <div>
+                <span >已有账号？去登陆</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="show_argunment">
+        <div>
+            <nav>电子卡注册协议</nav>
+            <section>
+            </section>
+            <div>任意点击关闭</div>
+        </div>
+    </div>
+
+
+</div>
+
+<footer>
+    <p>客服热线：400-8288251</p>
+    <p>服务时间：每日9:00-21:00</p>
+    <p>版权所有：南京鑫倍泽物联科技@·维空间</p>
+</footer>
+
+</body>
+<script src="../js/src/jquery.min.js"></script>
+<script>
+
+    let oWidth=$(window).width()/7.5;
+
+    $(document.documentElement).css("fontSize",oWidth);
+
+    $(function () {
+
+        var regMoblie = /^1[345678]\d{9}$/;
+        var phone,password,code;
+        $('input').blur(function () {
+            if($(this).val()==""){
+
+                $(this).css("borderColor","red");
+            }else {
+
+                if($(this)[0].name=="phone"){
+                    if(!regMoblie.test($(this).val())){
+                        alert("请输入正确的手机号");
+                        return
+                    }
+                    phone=$(this).val();
+                }else  if($(this)[0].name=="password1"){
+
+                    password=$(this).val();
+                }else if($(this)[0].name=="password2"){
+                    if($(this).val()==password){
+                        alert("两次密码不一致");
+                        return;
+                    }
+                }else {
+                    code=$(this).val();
+                }
+            }
+        });
+
+        $('input').focus(function () {
+            $(this).css("borderColor","#d6e0e2")
+        });
+
+        $('.land').click(function () {
+            if(!phone ||!password||!code){
+                alert("请输入相关信息");
+                return;
+            }
+            console.log(phone)
+        });
+        
+        $('.agreement').click(function () {
+
+            $('.show_argunment').addClass('show');
+
+        });
+
+        $('.show_argunment').click(function () {
+            $(this).removeClass('show');
+        })
+    })
+
+</script>
+</html>
