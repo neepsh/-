@@ -1,4 +1,4 @@
-$('#header').load('data/header.php',function () {
+$('#header').load('../data/header.php',function () {
     $('.header').text('优惠中心');
 })
 $('#footer').load('data/footer.php');

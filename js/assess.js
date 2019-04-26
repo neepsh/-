@@ -17,8 +17,22 @@ $(function () {
         $(this).addClass('star_active');
     });
 
-});
+    $('.assess_btn').click(function () {
+        if ($('#assess_text').val().length<15){
+                show_dialog({
+                    info:"评价字数少于15字，确定发布？？",
+                    cancel:"取消",
+                    define:"确定"
+                },
+                    function (data) {
+                        if(data){
+                            
+                        }
+                    })
+        }
+    })
 
+});
 
 $(function(){
     var delParent;
@@ -126,4 +140,4 @@ $(function(){
         }
         return arrFiles;
     }
-})
+});

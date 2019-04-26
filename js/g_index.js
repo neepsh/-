@@ -9,11 +9,20 @@ $(document.documentElement).css("fontSize",oWidth);
 
 $(function () {
 
-    var last=$('.item_top').eq(0);
+    var last=$('.item_top').eq(1);
 
     $('.item_top').click(function () {
         last.removeClass('item_active');
         $(this).addClass('item_active');
         last=$(this);
+    });
+
+    $('.order_back').click(function () {
+
+        $('#support').show();
+    });
+
+    $('.support_bg').click(function () {
+        $('#support').hide();
     })
 });

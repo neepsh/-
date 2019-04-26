@@ -106,6 +106,9 @@ input,button{
 .footer div{
     margin-bottom: 0.15rem;
 }
+#footer a{
+    display: inline-block;
+}
 .footer{
     margin-top: 0.22rem;
 }

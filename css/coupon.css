@@ -34,7 +34,7 @@ ul,li{
 }
 .list_name{
     font-size: 0.4rem;
-    font-weight: blod;
+    font-weight: bold;
     padding-top: 0.3rem;
 }
 .list_info{
@@ -44,3 +44,4 @@ ul,li{
 .list_num{
     padding-top: 0.3rem;
 }
+

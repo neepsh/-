@@ -2,22 +2,28 @@
 header("content:type:text/html");
 ?>
 <div class="footer">
-    <div>
-        <i class="icon-0452"></i>
-    </div>
-    <span>主页</span>
+    <a href="index.html">
+        <div>
+            <i class="icon-0452"></i>
+        </div>
+        <span>主页</span>
+     </a>
 </div>
 
 <div class="footer">
-    <div>
-        <i class="icon-0372"></i>
-    </div>
-    <span>代办</span>
+    <a href="instead.html">
+        <div>
+            <i class="icon-0372"></i>
+        </div>
+        <span>代办</span>
+    </a>
 </div>
 <div class="footer">
-    <div>
-        <i class="icon-0113"></i>
-    </div>
+    <a href="address.html">
+        <div>
+            <i class="icon-0113"></i>
+        </div>
 
-    <span>我的区域</span>
+        <span>我的区域</span>
+    </a>
 </div>

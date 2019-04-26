@@ -96,7 +96,7 @@
 .list_input input{
     border: none;
 }
-.list_input.show_map{
+.list_input.show_map a {
     display: flex;
     justify-content: space-between
 }

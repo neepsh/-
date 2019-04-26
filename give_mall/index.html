@@ -15,8 +15,8 @@
 <div id="content">
 
     <div class="top_nav">
-        <div class="item_top item_active">已支付</div>
-        <div class="item_top">已配送</div>
+        <div class="item_top ">已支付</div>
+        <div class="item_top item_active">配送中</div>
         <div class="item_top">已完成</div>
     </div>
 
@@ -60,7 +60,7 @@
                 <div><span>取货码：</span> <b>1515455</b></div>
                 <div>
                     <button><a href="#" class="">联系</a></button>
-                    <button>接收订单</button>
+                    <button class="order_back">退回订单</button>
                 </div>
             </div>
         </li>
@@ -70,6 +70,31 @@
         <div>￥30.00元</div>
         <div>全部接收</div>
     </div>
+
+    <div id="support" style="display: none">
+        <div class="support_bg"></div>
+        <div class="support">
+            <div class="del_support">
+                <div class="support_header">退回订单</div>
+                <div class="support_content">
+                    <div>请选择退回订单的原因</div>
+                    <ul class="support_list">
+                        <li><span>卖家拒收</span></li>
+                        <li><span>位置太远</span></li>
+                        <li><span>无法联系卖家</span></li>
+                    </ul>
+                </div>
+                <div class="support_info">
+                    <div>退单提示</div>
+                    <p>1、您的订单信息将发送至后台管理员，请及时与管理员取得联系 <span>025-545456</span></p>
+                </div>
+                <div class="support_btn">
+                    <button>确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <footer id="footer"></footer>

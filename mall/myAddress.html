@@ -28,9 +28,11 @@
             <li>
                 <div class="list_name">收货地址：</div>
                 <div class="list_input show_map">
-                    <i class="icon-0517"></i>
-                    <input type="text" placeholder="点击选择" readonly="readonly">
-                    <p></p>
+                    <a href="address_map.html">
+                        <i class="icon-0517"></i>
+                        <input type="text" placeholder="点击选择" readonly="readonly">
+                        <p></p>
+                    </a>
                 </div>
             </li>
             <li>
@@ -53,8 +55,8 @@
             <li>
                 <div  class="list_name">性别：</div>
                 <div  class="list_radio">
-                    <input  type="radio" placeholder="点击选择" value="sex"> <span >先生</span>
-                    <input type="radio" placeholder="点击选择" value="sex"> <span>女士</span></div>
+                    <input  type="radio" name="sex" checked placeholder="点击选择" value="1"> <span >先生</span>
+                    <input type="radio" name="sex" placeholder="点击选择" value="2"> <span>女士</span></div>
             </li>
             <li  class="label">
                 <div  class="list_name">标签：</div>
@@ -70,10 +72,11 @@
 
 <footer id="add_btn" class="show_address"><i class="icon-0294"></i>新增地址</footer>
 <footer class="show_manage manage_btn">
-    <button >删除</button> <button >保存地址</button>
+    <button >删除</button> <button id="save_address">保存地址</button>
 </footer>
 
 </body>
-<script type="text/javascript" src="../js/src/jquery.js"></script>
+<script type="text/javascript" src="../js/src/jquery.min.js"></script>
+<script type="text/javascript" src="../js/src/dialog.js"></script>
 <script type="text/javascript" src="../js/myAddress.js"></script>
 </html>
