@@ -1,5 +1,8 @@
 $('#header').load('../data/header.php',function(){
     $('.header').text('评价');
+    $('#header').click(function () {
+        history.back();
+    })
 });
 
 
@@ -10,14 +13,28 @@ $(document.documentElement).css("fontSize",oWidth);
 
 $(function () {
 
+    var data={}
+
 
     $('.star').click(function () {
 
+
+        data.level=$(this).index()+1;
         $('.star').removeClass('star_active');
         $(this).addClass('star_active');
     });
 
     $('.assess_btn').click(function () {
+        console.log(data.level)
+        if(!data.level){
+            show_dialog(
+                {
+                    info:"请先选择评价星级，然后提交",
+                    cancel_show:true,
+                    define: "确定"
+                });
+            return false;
+        };
         if ($('#assess_text').val().length<15){
                 show_dialog({
                     info:"评价字数少于15字，确定发布？？",
@@ -28,8 +45,10 @@ $(function () {
                         if(data){
                             
                         }
-                    })
-        }
+                    });
+        };
+
+
     })
 
 });
@@ -121,8 +140,8 @@ $(function(){
             var newStr = file.name.split("").reverse().join("");
             if(newStr.split(".")[0] != null){
                 var type = newStr.split(".")[0].split("").reverse().join("");
-                console.log(type+"===type===");
-                if(jQuery.inArray(type, defaults.fileType) > -1){
+
+                if($.inArray(type, defaults.fileType) > -1){
                     // 类型符合，可以上传
                     if (file.size >= defaults.fileSize) {
                         alert(file.size);

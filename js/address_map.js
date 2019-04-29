@@ -1,5 +1,7 @@
 $('#header').load('../data/header.php',function () {
-    $('.header').text('选择地址');
+    $('.header').text('选择地址').click(function () {
+        history.back()
+    });
 })
 $('#footer').load('data/footer.php');
 
@@ -67,8 +69,6 @@ window.onload=function () {
                                         lng: _this.attr('data-lng')
                                     }
                                 };
-
-
 
                                 sessionStorage.setItem('xbz_address',JSON.stringify(info));
                                 info={};

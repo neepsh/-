@@ -3,6 +3,9 @@ $('#footer').load('../data/footer.php',function () {
 });
 $('#header').load('../data/header.php',function () {
     $('.header').text('我的订单');
+    $('#header').click(function () {
+        history.back();
+    })
 });
 
 let oWidth=$(window).width()/7.5;
@@ -10,9 +13,11 @@ let oWidth=$(window).width()/7.5;
 $(document.documentElement).css("fontSize",oWidth);
 
 (function () {
-    var oRder=document.getElementsByClassName('nav');
+    var oRder=document.getElementsByClassName('nav'),
+    aList=document.getElementsByClassName('list');
 
-    var last=oRder[0];
+
+    var last=0;
 
     for( let i=0; i<oRder.length; i++){
 
@@ -20,11 +25,14 @@ $(document.documentElement).css("fontSize",oWidth);
 
          oRder[i].onclick=function () {
 
-            last.classList.remove('nav_active');
 
-             this.classList.add('nav_active');
+            oRder[last].classList.remove('nav_active');
 
-            last=this;
+            this.classList.add('nav_active');
+
+             aList[last].style.display="none";
+            aList[i].style.display="block";
+            last=i;
 
          }
     };
@@ -36,11 +44,16 @@ $(document.documentElement).css("fontSize",oWidth);
     $('.support_bg').click(function () {
         $('#support').hide();
     });
-    show_dialog(
-        {
-            info:"确定删除"
-        }
-    );
+
+    $('.support_list li').click(function () {
+
+        $('.order_icon').removeClass('check_list');
+
+        $(this).find('.order_icon').addClass('check_list')
+
+    });
+
+
 
 
 

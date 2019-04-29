@@ -6,7 +6,15 @@
     padding: 0 0.32rem;
     background: #fff;
     margin-top: 0.14rem;
+    position: relative;
 
+}
+.person_logo input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    left: 0;
 }
 .person_logo span{
     display: inline-block;
@@ -44,7 +52,120 @@
     width:1.5rem ;
     text-align: right;
 }
-.el-select{
+.el-personal_select{
     height: 100%;
     width: 100%;
 }
+#load_info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.2rem;
+}
+#load_info button{
+    border: none;
+    width: 40%;
+    padding: 0;
+    line-height: 0.8rem;
+}
+#load_info button:nth-of-type(1){
+    background: linear-gradient(to right, #f9eb60 , #fd951d);
+    color: #fff;
+    border-radius: 0.4rem 0 0 0.4rem;
+    border-right: 1px solid #fff;
+}
+#load_info button:nth-of-type(2){
+    background: linear-gradient(to right, #fd951d , #ff5b2f);
+    color: #fff;
+    border-radius: 0 0.4rem 0.4rem  0;
+}
+
+#up_logo{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    z-index:1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.up_logo{
+    background: #fff;
+
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    width: 90%;
+}
+.up_img img{
+    width: 4rem;
+}
+.up_img{
+    text-align: center;
+}
+.up_btn{
+    text-align: center;
+}
+.up_btn button{
+
+    line-height: 0.6rem;
+    padding: 0 0.25rem;
+    border: none;
+    background: #fc9316;
+    color: #fff;
+    border-radius: 0.3rem;
+}
+
+
+
+/*
+.personal_select {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #aaa;
+    text-shadow: none;
+    border-radius: 4px;
+    transition: box-shadow 0.25s ease;
+    z-index: 2;
+}
+
+.personal_select:hover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.personal_select:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #ccc;
+    top: 14px;
+    right: 10px;
+    cursor: pointer;
+    z-index: -2;
+}
+.personal_select select {
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.personal_select select:focus {
+    outline: none;
+}*/

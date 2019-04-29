@@ -1,8 +1,18 @@
 $('#header').load('../data/header.php', function () {
-    $('.header').text('我的地址').click(
+    $('.header').text('我的地址');
+    $('#header').click(function (e) {
+        if($(e.target).attr('id')=='header'){
+            if($('.header').text()=='我的地址'){
+                history.back();
+            }else {
+                $('.show_address').show();
+                $('.show_manage').hide();
+                $('.header').text("我的地址")
+            }
+        }
 
-    );
-})
+    });
+});
 
 let oWidth = $(window).width() / 7.5;
 
@@ -21,9 +31,9 @@ $(document.documentElement).css("fontSize", oWidth);
     }
 
 
-    $('#save_address').click(function () {
+    $('#save_address').tap(function () {
 
-        if(!$('input:radio:checked')){
+        if(!$('input[checked=checked]')){
             show_dialog({
                 info:"请选择性别！",
                 define:'确定',
@@ -31,7 +41,6 @@ $(document.documentElement).css("fontSize", oWidth);
             });
             return
         };
-        
         $.each($('input[type=text]'),function (i,obj) {
 
             if(i==0){
@@ -41,7 +50,6 @@ $(document.documentElement).css("fontSize", oWidth);
                         define:'确定',
                         cancel_show:true
                     });
-
                      return false
                 }
             }else if(i==1){
@@ -51,10 +59,9 @@ $(document.documentElement).css("fontSize", oWidth);
                         info:"请输入收货详情地址！",
                         define:'确定',
                         cancel_show:true
-                    },function () {
-                        $(obj).focus();
                     });
 
+                     $(obj).focus();
                     return false
                 }
             }else if(i==2){
@@ -92,16 +99,7 @@ $(document.documentElement).css("fontSize", oWidth);
                 }
             }
         });
-
-
-
-
-
-
-
     })
-
-
 
 })();
 

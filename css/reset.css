@@ -179,12 +179,14 @@ input[type=radio]:checked:after  {
     border-radius: 0.2rem;
 }
 .dialog_info{
-    padding: 0.5rem;
+    font-size: 0.3rem;
+    line-height: 0.4rem;
+    padding: 0.5rem 0.2rem ;
     text-align: center;
 }
 .dialog_btn{
     text-align: center;
-    padding: 0.2rem 0;
+
 }
 .dialog_btn button{
     padding: 0.1rem 0.2rem;

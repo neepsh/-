@@ -15,16 +15,61 @@
 <div id="content">
 
     <div class="top_nav">
-        <div class="item_top ">已支付</div>
-        <div class="item_top item_active">配送中</div>
+        <div class="item_top item_active">已支付</div>
+        <div class="item_top ">配送中</div>
         <div class="item_top">已完成</div>
     </div>
 
-    <ul class="oder_content">
+    <ul class="oder_content" style="">
         <li>
             <div class="info_header">
                 <div><span>订单编号：</span> <b>151515454</b></div>
                 <div>未接单</div>
+            </div>
+            <div class="info_center">
+                <div class="info_left">
+                    <div>
+                        <img src="../img/procuct_img.jpg" alt="#">
+                    </div>
+                    <div>
+                        <p>鲜榨橙汁</p>
+                        <span>鲜榨橙汁纸杯装</span>
+                    </div>
+                </div>
+                <div class="info_right">
+                    <p>￥15.00</p>
+                    <span>X3</span>
+                    <div class="all_price">
+                        共计:
+                        <span>￥45.00</span>
+                        元
+                    </div>
+                </div>
+            </div>
+            <div class="info_address">
+                <p>
+                    地址：
+                    <span>南京市江宁区麒麟科技创新园天骄路100号7栋3楼a302</span>
+                </p>
+                <p>
+                    联系：
+                    <span>王先生</span> <span>1454455665</span>
+                </p>
+            </div>
+            <div class="info_footer">
+                <div><span>取货码：</span> <b>1515455</b></div>
+                <div>
+                    <button><a href="#" class="">联系</a></button>
+                    <button class="order_check">立即接单</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="oder_content" style="display: none">
+        <li>
+            <div class="info_header">
+                <div><span>订单编号：</span> <b>151515454</b></div>
+                <div>配送中</div>
             </div>
             <div class="info_center">
                 <div class="info_left">
@@ -65,6 +110,51 @@
             </div>
         </li>
     </ul>
+    <ul class="oder_content" style=" display: none">
+        <li>
+            <div class="info_header">
+                <div><span>订单编号：</span> <b>151515454</b></div>
+                <div>已完成</div>
+            </div>
+            <div class="info_center">
+                <div class="info_left">
+                    <div>
+                        <img src="../img/procuct_img.jpg" alt="#">
+                    </div>
+                    <div>
+                        <p>鲜榨橙汁</p>
+                        <span>鲜榨橙汁纸杯装</span>
+                    </div>
+                </div>
+                <div class="info_right">
+                    <p>￥15.00</p>
+                    <span>X3</span>
+                    <div class="all_price">
+                        共计:
+                        <span>￥45.00</span>
+                        元
+                    </div>
+                </div>
+            </div>
+            <div class="info_address">
+                <p>
+                    地址：
+                    <span>南京市江宁区麒麟科技创新园天骄路100号7栋3楼a302</span>
+                </p>
+                <p>
+                    联系：
+                    <span>王先生</span> <span>1454455665</span>
+                </p>
+            </div>
+           <!-- <div class="info_footer">
+                <div><span>取货码：</span> <b>1515455</b></div>
+                <div>
+                    <button><a href="#" class="">联系</a></button>
+                    <button class="order_back">退回订单</button>
+                </div>
+            </div>-->
+        </li>
+    </ul>
 
     <div class="oder_footer">
         <div>￥30.00元</div>
@@ -89,6 +179,7 @@
                     <p>1、您的订单信息将发送至后台管理员，请及时与管理员取得联系 <span>025-545456</span></p>
                 </div>
                 <div class="support_btn">
+                    <button>取消</button>
                     <button>确定</button>
                 </div>
             </div>
@@ -99,6 +190,6 @@
 
 <footer id="footer"></footer>
 </body>
-<script type="text/javascript" src="../js/src/jquery.js"></script>
+<script type="text/javascript" src="../js/src/zepto.min.js"></script>
 <script type="text/javascript" src="../js/g_index.js"></script>
 </html>

@@ -23,7 +23,7 @@
         </div>
     </div>
     <div id="list">
-        <div class="list">
+        <div class="list" style="display: block">
             <ul>
                 <li class="order">
                     <div class="order_header">
@@ -58,14 +58,94 @@
                         </div>
                         <div class="order_btn">
                             <button class="order_assess"><a href="assess.html">评价</a></button>
+                            <button class="order_delete">退款/售后</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul>
+                <li class="order">
+                    <div class="order_header">
+                        <div>
+                            <b>订单编号：</b>
+                            <span>1515415154</span>
+                        </div>
+                        <div>等待配送员接单</div>
+                    </div>
+                    <div class="order_content">
+                        <div class="order_left">
+                            <div class="order_img">
+                                <img src="../img/procuct_img.jpg" alt="product">
+                            </div>
+                            <div class="order_info">
+                                <span>鲜榨橙汁</span>
+                                <p>鲜榨橙汁纸杯装</p>
+                            </div>
+                        </div>
+                        <div class="order_right">
+                            <div>￥15</div>
+                            <div>x3</div>
+                            <div>
+                                共计：<span>￥45.00</span>元
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_footer">
+                        <div class="order_code">
+                            取货码：
+                            <span>1512121</span>
+                        </div>
+                        <div class="order_btn">
+<!--                            <button class="order_assess">查看地址</button>-->
                             <button class="order_delete">退货</button>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="list"></div>
-        <div class="list"></div>
+        <div class="list">
+            <ul>
+                <li class="order">
+                    <div class="order_header">
+                        <div>
+                            <b>订单编号：</b>
+                            <span>1515415154</span>
+                        </div>
+                        <div>配送中</div>
+                    </div>
+                    <div class="order_content">
+                        <div class="order_left">
+                            <div class="order_img">
+                                <img src="../img/procuct_img.jpg" alt="product">
+                            </div>
+                            <div class="order_info">
+                                <span>鲜榨橙汁</span>
+                                <p>鲜榨橙汁纸杯装</p>
+                            </div>
+                        </div>
+                        <div class="order_right">
+                            <div>￥15</div>
+                            <div>x3</div>
+                            <div>
+                                共计：<span>￥45.00</span>元
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_footer">
+                        <div class="order_code">
+                            取货码：
+                            <span>1512121</span>
+                        </div>
+                        <div class="order_btn">
+                            <button class="order_assess">确认收货</button>
+                            <button class="order_delete">退货</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
 <!--  退款售后-->
@@ -78,11 +158,11 @@
                 <div class="support_content">
                     <div>请选择取消订单的原因</div>
                     <ul class="support_list">
-                        <li><span>我不想买了</span></li>
-                        <li><span>信息填写错误，重新拍</span></li>
-                        <li><span>卖家缺货</span></li>
-                        <li><span>选择自提</span></li>
-                        <li><span>其他原因</span></li>
+                        <li><span>我不想买了</span><div class="order_icon"><i class="icon-0330"></i></div></li>
+                        <li><span>信息填写错误，重新拍</span><div class="order_icon"><i class="icon-0330"></i></div></li>
+                        <li><span>卖家缺货</span><div class="order_icon"><i class="icon-0330"></i></div></li>
+                        <li><span>选择自提</span><div class="order_icon"><i class="icon-0330"></i></div></li>
+                        <li><span>其他原因</span><div class="order_icon"><i class="icon-0330"></i></div></li>
                     </ul>
                 </div>
                 <div class="support_info">
@@ -102,7 +182,6 @@
 
 <div id="footer"></div>
 </body>
-<script type="text/javascript" src="../js/src/jquery.js"></script>
+<script type="text/javascript" src="../js/src/zepto.min.js"></script>
 <script type="text/javascript" src="../js/src/dialog.js"></script>
 <script type="text/javascript" src="../js/order.js"></script>
-</html>

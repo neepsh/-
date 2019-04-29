@@ -76,8 +76,12 @@
     color: #555;
 }
 .z_photo{
-    padding: 0.2rem;
+
     border:2px dashed #E7E6E6;
+    display: flex;
+    flex-wrap:wrap;
+    align-content: space-between;
+    padding-bottom:0.1rem ;
 }
 .z_photo .z_file{
     position: relative;

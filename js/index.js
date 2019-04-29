@@ -19,12 +19,13 @@ $(function () {
         if($(this).text()=="-"){
             if(num>0){
                 num--;
-
             }
             $(this).siblings('b').text(num);
+            $('.all_price').text(num*15);
         }else {
             num++;
             $(this).siblings('b').text(num);
+            $('.all_price').text(num*15);
         }
     });
 
