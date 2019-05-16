@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/icom.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .search {
+            position: relative;
+            padding: 0.25rem;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .search input{
+            height: 0.6rem;
+            border-radius: 0.3rem;
+            width: 100%;
+            background: #EFEFEF;
+            text-indent: 0.8rem;
+            border: none;
+            outline: none;
+        }
+        .search i{
+            position: absolute;
+            font-size: 0.4rem;
+            color: #363636;
+            top: 0.35rem;
+            left: 0.5rem;
+        }
+        .search span{
+            margin-left: 0.4rem;
+            display: inline-block;
+            width: 1.5rem;
+            line-height: 0.6rem;
+            background: #fc9316;
+            color: #fff;
+            border-radius: 0.3rem;
+        }
+
+        .content>nav{
+            text-align: left;
+            display: flex;
+            line-height: 0.5rem;
+            align-content: center;
+            justify-content: space-around;
+            padding: 0.3rem;
+        }
+        .content>nav>*{
+            width: 50%;
+        }
+        .content>nav>p{
+            text-align: right;
+        }
+        .list{
+            border-bottom: 1px solid #e3e3e3;
+            position: relative;
+            background: #fff;
+        }
+        .list>nav{
+            padding: 0 0.3rem;
+            height: 0.8rem;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+        }
+        .list>nav>*{
+            width: 50%;
+        }
+        .list i{
+            width: 50%;
+            text-align: right;
+        }
+        .list>div{
+            display: none;
+            line-height: 0.5rem;
+            padding: 0.2rem 0.3rem;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<header id="header">
+    <div><i class="icon-0317"></i><span class="header"> 帮助中心</span></div>
+</header>
+
+<div id="content">
+    <div  class="search">
+        <input id="address_val" type="text">
+        <i class="icon-0090"></i>
+        <span class="search_btn">确定</span>
+    </div>
+
+    <div class="content">
+        <nav>
+            <span>常见问题</span>
+            <p>
+                <b>全部</b>
+                <i class="icon-0230"></i>
+            </p>
+        </nav>
+        <ul>
+            <li class="list">
+                <nav><span>如何联系人工客服</span><i class="icon-0230"></i></nav>
+                <div>
+                    <p>1、客服联系电话</p>
+                    <p>1、客服微信号</p>
+                    <p>3、打开阿橙果啦微信公众号直接回复</p>
+                </div>
+            </li>
+            <li class="list">
+                <nav><span>如何联系人工客服</span><i class="icon-0230"></i></nav>
+                <div>
+                    <p>1、客服联系电话</p>
+                    <p>1、客服微信号</p>
+                    <p>3、打开阿橙果啦微信公众号直接回复</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="../js/src/zepto.min.js"></script>
+<script>
+
+    var oW=document.documentElement.clientWidth/7.5;
+    document.querySelector('html').style.fontSize=oW+'px';
+    $(function () {
+
+        $('.list nav').click(function () {
+            $(this).siblings('div').toggle();
+        })
+    })
+</script>
+</html>

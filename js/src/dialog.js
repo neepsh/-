@@ -1,5 +1,6 @@
 function show_dialog(option,callback) {
     $('#dialog').css('display','flex');
+
     if(option.cancel_show){
         $('.dialog_cancel').css('display','none');
     }

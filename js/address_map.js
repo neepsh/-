@@ -31,6 +31,7 @@ window.onload=function () {
 
         var geoCoder=new qq.maps.Geocoder({
             complete:function (result) {
+                console.log(result);
                 $('.list').empty();
                 $.each(result.detail.nearPois,function (i ,str) {
                     //console.log(str)

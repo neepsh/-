@@ -1,5 +1,10 @@
 $('#header').load('../data/header.php', function () {
     $('.header').text('我的地址');
+
+    if($('.header').text()=="我的地址"){
+
+    }
+
     $('#header').click(function (e) {
         if($(e.target).attr('id')=='header'){
             if($('.header').text()=='我的地址'){
@@ -10,98 +15,109 @@ $('#header').load('../data/header.php', function () {
                 $('.header').text("我的地址")
             }
         }
-
     });
-});
 
-let oWidth = $(window).width() / 7.5;
+    (function () {
 
-$(document.documentElement).css("fontSize", oWidth);
+        $('.manage').click(address_manage);
 
-(function () {
+        var my_address=JSON.parse(sessionStorage.getItem('xbz_address'));
 
-    $('.manage').click(address_manage);
-
-    var my_address=JSON.parse(sessionStorage.getItem('xbz_address'));
-
-    if(my_address){
-        address_manage();
-        $('input[type=text]').eq(0).val(my_address.address);
-        sessionStorage.removeItem('xbz_address');
-    }
-
-
-    $('#save_address').tap(function () {
-
-        if(!$('input[checked=checked]')){
+        if(my_address){
+            address_manage();
+            $('input[type=text]').eq(0).val(my_address.address);
+            sessionStorage.removeItem('xbz_address');
+        }else {
             show_dialog({
-                info:"请选择性别！",
-                define:'确定',
+                info:"还没有添加地址，请添加",
+                define:"确定",
                 cancel_show:true
+            },function () {
+                $('.show_address').hide();
+                $('.show_manage').show();
+                $('.header').text("地址修改")
             });
-            return
-        };
-        $.each($('input[type=text]'),function (i,obj) {
+        }
 
-            if(i==0){
-                if($(obj).val()==''){
-                     show_dialog({
-                        info:"请选择收货地址！",
-                        define:'确定',
-                        cancel_show:true
-                    });
-                     return false
-                }
-            }else if(i==1){
 
-                if($(obj).val()==''){
-                    show_dialog({
-                        info:"请输入收货详情地址！",
-                        define:'确定',
-                        cancel_show:true
-                    });
+        $('#save_address').tap(function () {
 
-                     $(obj).focus();
-                    return false
-                }
-            }else if(i==2){
-                if($(obj).val()==''){
-                    show_dialog({
-                        info:"请输入收货人姓名！",
-                        define:'确定',
-                        cancel_show:true
-                    });
-                    $(obj).focus();
-                    return false
-                }
-            }else {
-                if($(obj).val()==''){
-                    show_dialog({
-                        info:"请输入联系人电话！",
-                        define:'确定',
-                        cancel_show:true
-                    });
-                    $(obj).focus();
-                    return false
-                }else {
-                    var regMoblie = /^1[345678]\d{9}$/;
+            if(!$('input[checked=checked]')){
+                show_dialog({
+                    info:"请选择性别！",
+                    define:'确定',
+                    cancel_show:true
+                });
+                return
+            };
+            $.each($('input[type=text]'),function (i,obj) {
 
-                    if(!regMoblie.test($(obj).val())){
-
+                if(i==0){
+                    if($(obj).val()==''){
                         show_dialog({
-                            info:"请输入正确的联系人电话！",
+                            info:"请选择收货地址！",
+                            define:'确定',
+                            cancel_show:true
+                        });
+                        return false
+                    }
+                }else if(i==1){
+
+                    if($(obj).val()==''){
+                        show_dialog({
+                            info:"请输入收货详情地址！",
+                            define:'确定',
+                            cancel_show:true
+                        });
+
+                        $(obj).focus();
+                        return false
+                    }
+                }else if(i==2){
+                    if($(obj).val()==''){
+                        show_dialog({
+                            info:"请输入收货人姓名！",
                             define:'确定',
                             cancel_show:true
                         });
                         $(obj).focus();
                         return false
                     }
-                }
-            }
-        });
-    })
+                }else {
+                    if($(obj).val()==''){
+                        show_dialog({
+                            info:"请输入联系人电话！",
+                            define:'确定',
+                            cancel_show:true
+                        });
+                        $(obj).focus();
+                        return false
+                    }else {
+                        var regMoblie = /^1[345678]\d{9}$/;
 
-})();
+                        if(!regMoblie.test($(obj).val())){
+
+                            show_dialog({
+                                info:"请输入正确的联系人电话！",
+                                define:'确定',
+                                cancel_show:true
+                            });
+                            $(obj).focus();
+                            return false
+                        }
+                    }
+                }
+            });
+        })
+
+    })();
+});
+
+let oWidth = $(window).width() / 7.5;
+
+$(document.documentElement).css("fontSize", oWidth);
+
+
 
 function address_manage() {
 
