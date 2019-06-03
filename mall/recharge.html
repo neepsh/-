@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/icom.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        #content{
+            margin-top: 0.3rem;
+        }
+        .item {
+            background: #fff;
+        }
+        .item input{
+            height: 1.24rem;
+            border: none;
+            text-indent: 1em
+        }
+        .btn button{
+            margin-top: 0.3rem;
+            height: 1rem;
+            background:#ff7500;
+            color: #fff;
+            border: none;
+            width: 100%;
+        }
+    </style>
+    <title>充值</title>
+</head>
+<body>
+<header id="header">
+    <div><i class="icon-0231"></i><span class="header"> 充值中心</span></div>
+</header>
+
+<div id="content">
+    <div class="item">
+        <input type="text" placeholder="充值金额 ￥"/>
+    </div>
+    <div class="btn">
+        <button>立即充值</button>
+    </div>
+</div>
+
+</body>
+<script>
+    var oW=document.documentElement.clientWidth/7.8;
+
+    document.querySelector('html').style.fontSize=oW+'px';
+</script>
+</html>
