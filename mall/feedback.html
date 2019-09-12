@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/icom.css">
+    <style>
+        .nav{display: flex;justify-content: space-between;line-height: 0.5rem;margin: 0 0.2rem;padding-top: 0.1rem;}
+        #info{resize: none; box-sizing: border-box;width: 100%;margin:0.1rem 0;border: none;padding: 0.2rem;}
+        .list{height: 2rem;width: 2rem;margin: 0.2rem 0.1rem 0 0}
+        .up_file{padding:0 0.2rem 0.2rem 0.2rem;background: #fff;display: flex;flex-wrap:wrap; }
+        .icon{font-size:0.9rem;background:#f9f5f5; color:#bbb8b8 ;text-align: center;line-height: 2rem;}
+        .btn button{padding: 0.18rem 1.35rem;border: none;background: #ff7500;color:#fff;border-radius: 0.08rem;}
+        .img_content{display: flex;flex-wrap: wrap;}
+        .img img{height: 100%;width: 100%;}
+        .img{position: relative;}
+        .icon_img{position: absolute;right: -0.12rem;top:-0.121rem;font-size: 0.24rem;transform: scale(0.8);color: #d3d3d3;display: none;}
+        .del_img{opacity: 0.6;}
+        .del_img .icon_img{display: inline-block;}
+        #file{display: none;}
+        .btn{text-align: center;margin-top: 0.4rem;}
+    </style>
+    <title>用户反馈</title>
+</head>
+<body>
+<header id="header"></header>
+
+<div id="content">
+    <nav class="nav">
+        <div class="title">问题和意见</div>
+        <div class="title_size_num">0/200</div>
+    </nav>
+    <textarea name="" id="info" cols="30" rows="10" placeholder="请填写10字以上的问题描述以便我们提供更好的帮助"></textarea>
+    <nav class="nav">
+        <div class="title">
+            <span>图片</span>
+            <span>（选填、提供问题截图）</span>
+        </div>
+        <div>0/3</div>
+    </nav>
+
+    <div class="up_file">
+        <div class="img_content">
+
+        </div>
+        <div class="list icon">
+            <i class="icon-0294"></i>
+        </div>
+    </div>
+    <input type="file" id="file">
+    <div class="btn">
+        <button>提交</button>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/src/zepto.min.js"></script>
+<script type="text/javascript" src="../js/src/dialog.js"></script>
+<script>
+    $(function () {
+        $('#header').load('../data/header.php',function () {
+
+            $('.header').text('用户反馈');
+
+            $('.header').click(function(){
+                history.back()
+            });
+        });
+
+        $('#footer').load('data/footer.php');
+
+        let oWidth=$(window).width()/7.5;
+
+        $(document.documentElement).css("fontSize",oWidth);
+    })
+
+    $(function () {
+        $('#info').keyup(function () {
+           $('.title_size_num').text($(this).val().length+"/200");
+        });
+
+        var img_size=0,img_url=[];
+        $('.icon').click(function () {
+            console.log(img_size)
+            if(img_size<3){
+                $('#file').click();
+            }else {
+
+            }
+
+        });
+
+        $('#file').change(function (e) {
+
+            img_size++;
+            let files=$(this)[0].files[0];
+            let reader=new FileReader();
+            reader.readAsDataURL(files);
+            reader.onload=function () {
+                img_url.push(this.result);
+                init_list(img_url);
+                $('.img').click(function () {
+                    if(!$(this).hasClass('del_img')){
+                        $(this).addClass('del_img');
+                    }else {
+                        $(this).removeClass('del_img');
+                    }
+                })
+                $('.icon_img').click(function () {
+                    let index=$('.icon_img').index($(this));
+                    img_url.splice(index,1);
+                    console.log(img_url)
+                    $(this).parents('.img').remove();
+
+                    init_list(img_url)
+                })
+            }
+        })
+    })
+
+    function init_list(str) {
+
+        $('.img_content').empty();
+        $.each(str,function (i,obj) {
+            $('.img_content').append(`
+                        <div class="list img">
+                            <img src=${obj} alt="#">
+                            <i class="icon-0307 icon_img"></i>
+                        </div>
+                    `)
+        })
+    }
+
+    show_dialog({
+        info:"请输入正确的联系人电话！",
+        define:'确定',
+        cancel_show:true
+    },function () {
+        console.log(555)
+    });
+
+</script>
+</html>

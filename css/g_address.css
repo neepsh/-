@@ -109,3 +109,9 @@
     background: #FC9316;
     text-align: center;
 }
+#apply{
+    display: none;
+}
+#add_address{
+    display: none;
+}

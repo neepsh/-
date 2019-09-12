@@ -9,6 +9,13 @@ let oWidth=$(window).width()/7.5;
 
 $(document.documentElement).css("fontSize",oWidth);
 
+$.ajax({
+    url:"",
+    type:"get",
+    success:function (res) {
+        console.log(res)
+    }
+})
 window.onload=function () {
     function init() {
 
@@ -31,7 +38,6 @@ window.onload=function () {
 
         var geoCoder=new qq.maps.Geocoder({
             complete:function (result) {
-                console.log(result);
                 $('.list').empty();
                 $.each(result.detail.nearPois,function (i ,str) {
                     //console.log(str)
