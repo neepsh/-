@@ -37,7 +37,7 @@
             <span>图片</span>
             <span>（选填、提供问题截图）</span>
         </div>
-        <div>0/3</div>
+        <div class="list_len">0/3</div>
     </nav>
 
     <div class="up_file">
@@ -54,8 +54,9 @@
     </div>
 </div>
 </body>
-<script type="text/javascript" src="../js/src/zepto.min.js"></script>
-<script type="text/javascript" src="../js/src/dialog.js"></script>
+<script type="text/javascript"  src="../js/src/zepto.min.js"></script>
+<script type="text/javascript" id="script"></script>
+
 <script>
     $(function () {
         $('#header').load('../data/header.php',function () {
@@ -65,6 +66,9 @@
             $('.header').click(function(){
                 history.back()
             });
+
+            $('#script').attr('src','../js/src/dialog.js');
+
         });
 
         $('#footer').load('data/footer.php');
@@ -80,64 +84,80 @@
         });
 
         var img_size=0,img_url=[];
+
+        //点击 + 号,添加图片
         $('.icon').click(function () {
-            console.log(img_size)
             if(img_size<3){
                 $('#file').click();
             }else {
-
+                show_dialog({
+                    info:"最多只能上传3张图片！",
+                    define:'确定',
+                    cancel_show:true
+                },function () {});
             }
-
         });
-
-        $('#file').change(function (e) {
+        // 添加图片
+        $('#file').change(function () {
 
             img_size++;
+            $('.list_len').text(img_size + "/3");
             let files=$(this)[0].files[0];
             let reader=new FileReader();
             reader.readAsDataURL(files);
+            //图片加载完成后
             reader.onload=function () {
                 img_url.push(this.result);
                 init_list(img_url);
-                $('.img').click(function () {
-                    if(!$(this).hasClass('del_img')){
-                        $(this).addClass('del_img');
-                    }else {
-                        $(this).removeClass('del_img');
-                    }
-                })
-                $('.icon_img').click(function () {
-                    let index=$('.icon_img').index($(this));
-                    img_url.splice(index,1);
-                    console.log(img_url)
-                    $(this).parents('.img').remove();
 
-                    init_list(img_url)
-                })
             }
         })
-    })
 
-    function init_list(str) {
+        // 添加选中状态显示删除图标
+        function show_opacity(){
+            $('.img').click(function () {
+                if(!$(this).hasClass('del_img')){
+                    $(this).addClass('del_img');
+                }else {
+                    $(this).removeClass('del_img');
+                }
+            })
+        }
+        // 删除选中图片
+        function delete_img(callback) {
+            $('.icon_img').click(function () {
+                show_dialog({
+                    info:"确定删除该图片！",
+                    define:'确定',
+                    cancel_show:true,
+                    cancel:"取消"
+                },function () {
+                        let index=$('.icon_img').index($(this));
+                        console.log(img_url)
+                        img_url.splice( index , 1);
+                       init_list(img_url);
+                        img_size--;
+                        $('.list_len').text(img_size + "/3");
+                        callback();
+                });
+            })
+        }
 
-        $('.img_content').empty();
-        $.each(str,function (i,obj) {
-            $('.img_content').append(`
+        // 图片加载完后显示图片
+        function init_list(str) {
+            $('.img_content').empty();
+            $.each(str,function (i,obj) {
+                $('.img_content').append(`
                         <div class="list img">
                             <img src=${obj} alt="#">
                             <i class="icon-0307 icon_img"></i>
                         </div>
                     `)
-        })
-    }
+            })
 
-    show_dialog({
-        info:"请输入正确的联系人电话！",
-        define:'确定',
-        cancel_show:true
-    },function () {
-        console.log(555)
-    });
-
+            show_opacity(delete_img);
+            delete_img(show_opacity)
+        }
+    })
 </script>
 </html>

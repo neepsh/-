@@ -203,4 +203,5 @@ input[type=radio]:checked:after  {
     background: #fc9316;
     color: #fff;
     border: none;
+    margin:0 0.5rem;
 }
