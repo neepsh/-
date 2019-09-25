@@ -89,14 +89,14 @@
     padding: 0 0.2rem;
     outline: none;
 }
-.info_footer button:nth-of-type(1) {
+.info_footer button {
     color: #fff;
     background: #fc9316;
     margin-right: 0.15rem;
 }
-.info_footer button:nth-of-type(2) {
+/* .info_footer button:nth-of-type(2) {
     border: 1px solid #828282;
-}
+} */
 .info_address {
     text-align: right;
     color: #7a7a7a;

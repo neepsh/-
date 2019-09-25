@@ -4,18 +4,18 @@ header("content:type:text/html");
 <div class="footer">
     <a href="index.html">
         <div>
-            <i class="icon-0452"></i>
+            <i class="icon-0372"></i>
         </div>
-        <span>主页</span>
+        <span>配送中</span>
      </a>
 </div>
 
 <div class="footer">
     <a href="instead.html">
         <div>
-            <i class="icon-0372"></i>
+            <i class="icon-0379"></i>
         </div>
-        <span>代办</span>
+        <span>已完成</span>
     </a>
 </div>
 <div class="footer">

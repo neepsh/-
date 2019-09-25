@@ -1,5 +1,5 @@
 $('#header').load('../data/header.php',function () {
-    $('.header').text('接单大厅');
+    $('.header').text('配送中');
 })
 $('#footer').load('../data/g_footer.php');
 

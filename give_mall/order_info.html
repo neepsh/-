@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/order_info.css">
+    <title>订单详情</title>
+</head>
+<body>
+
+    <div class="content">
+        <header id="header"></header>
+        <div class="id">订单号：1710162530124820101</div>
+        <div class="bg">
+            <div class="item address flex">
+                <div class="address_bg"><img src="../img/address.png" alt="icon"></div>
+                <div class="grow">
+                    富力科技园9幢3楼308南京鑫倍泽物联科技公司
+                </div>
+            </div>
+            <ul class="item order_other">
+               <li class="flex">
+                   <div class="color">下单时间</div>
+                   <div class="order_info grow">2019-9-23 14:15</div>
+               </li>
+                <li class="flex">
+                    <div class="color">配送单号</div>
+                    <div class="order_info grow">64564654533</div>
+                </li>
+                <li class="flex">
+                    <div class="color">下单时间</div>
+                    <div class="order_info grow">2019-9-23 14:15</div>
+                </li>
+            </ul>
+            <div class="item order_content">
+                <nav class="color">订单内容</nav>
+                <div class="flex">
+                    <div class="flex">
+                        <img src="../img/order_product.png" alt="订单产品">
+                        <span class="margin">原味橙汁</span>
+                    </div>
+                    <div class="flex">
+                        <span>x1</span>
+                        <span class="margin">￥15</span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="flex">
+                        <span class="icon color2">配送费</span>
+                        <span class="margin">配送费</span>
+                    </div>
+                    <div class="flex">
+                        <span>￥15</span>
+                    </div>
+                </div>
+                <div class="right"> 实付<span class="price size">17</span></div>
+            </div>
+
+            <div class="item">
+                <nav class="color">送达时间</nav>
+                <div class="color2">请于今日15:00之前确认送达并点击“已送达”</div>
+            </div>
+
+
+        </div>
+
+        <div class="btn">
+            <button class="remove">忽略</button>
+            <button class="choice btn_bg">接单</button>
+        </div>
+    </div>
+    <footer class="color">如有疑问，请拨打客服电话：400-828-8251 </footer>
+
+
+</body>
+<script type="text/javascript" src="../js/src/zepto.min.js"></script>
+<script type="text/javascript" id="script"></script>
+
+<script>
+
+    $(function () {
+        $('#header').load('../data/header.php',function () {
+
+            $('.header').text('订单详情');
+
+            $('.header').click(function(){
+                history.back()
+            });
+
+            $('#script').attr('src','../js/src/dialog.js');
+
+        });
+
+        let oWidth=$(window).width()/7.5;
+
+        $(document.documentElement).css("fontSize",oWidth);
+    })
+
+</script>
+</html>

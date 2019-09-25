@@ -1,0 +1,114 @@
+body {
+ background:#f7f7f7;
+   font-size:0.24rem;
+    height: 100%;
+}
+.id{
+  padding: 0 0.3rem;
+  line-height: 1.14rem;
+  border-bottom: 0.01rem solid #e1e1e1;
+  color: #4c4c4c;
+}
+.bg{
+  padding: 0 0.3rem;
+ background: #fff;
+} 
+.color{
+  color: #999;
+}
+.color1{
+  color: #666;
+}
+.color2{
+   color: #f18200;
+}
+.size{
+  font-size: 0.3rem;
+}
+.address img{
+  height: 0.4rem;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.grow{
+  flex-grow: 3;
+  margin-left: 0.3rem;
+}
+.item{
+  padding: 0.23rem 0;
+  border-bottom: 0.01rem solid #e1e1e1;
+}
+.order_other li{
+  padding-bottom: 0.2rem;
+}
+.order_other li:nth-last-child(1){
+  padding: 0;
+}
+.right{
+  text-align: right;
+}
+.order_content img{
+  height:  0.96rem;
+}
+.item nav{
+  padding: 0 0 0.3rem;
+}
+.margin{
+  margin-left: 0.33rem;
+  display: inline-block；
+}
+.order_content>div{
+  padding-bottom: 0.4rem;
+}
+.order_content>div:nth-last-of-type(1){
+  padding: 0;
+}
+.icon{
+  padding: 0.04rem 0.07rem;
+  background: #ffefe0;
+  border-radius: 0.02rem;
+  font-size: 0.16rem;
+}
+.content{
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 0.24rem;
+  box-sizing: border-box;
+}
+
+.btn{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.9rem;
+}
+.btn button{
+  background: #f18200;
+  color: #fff;
+  border: none;
+  padding: 0.15rem 0.6rem;
+  border-radius: 0.06rem;
+}
+footer{
+  text-align: center;
+  margin-top: -0.34rem;
+}
+.btn .btn_bg{
+  background: #e3e3e3
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
