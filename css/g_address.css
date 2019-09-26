@@ -2,6 +2,48 @@
     text-align: left;
     font-size: 0.35rem;
     padding: 0.36rem 0;
+    
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 21px;
+    border: 1px solid #DFDFDF;
+    outline: none;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: border-color .3s,background-color .3s;
+    vertical-align: middle;
+}
+#switch{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0.26rem 0;
+    border-bottom: 0.01rem solid #e3e3e3
+}
+.switch span{
+        position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    background-color: #fff;
+}
+
+.switch.active{
+  border-color: #33DB70;
+  background-color: #33DB70;
+}
+.switch.active span{
+  transform: translateX(28px);
 }
 .contents{
     padding: 0 0.25rem;
